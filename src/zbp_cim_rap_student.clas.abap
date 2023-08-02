@@ -1,0 +1,5 @@
+CLASS zbp_cim_rap_student DEFINITION PUBLIC ABSTRACT FINAL FOR BEHAVIOR OF zcim_rap_student.
+ENDCLASS.
+
+CLASS zbp_cim_rap_student IMPLEMENTATION.
+ENDCLASS.

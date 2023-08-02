@@ -1,0 +1,29 @@
+managed implementation in class zbp_cim_rap_student unique;
+strict;
+
+define behavior for ZCIM_RAP_STUDENT alias Student
+persistent table zcim_rap_table
+lock master
+authorization master ( instance )
+//etag master <field_name>
+{
+  create;
+  update;
+  delete;
+
+  field ( numbering : managed, readonly ) Id;
+  action ( features : instance ) setAdmitted result [1] $self;
+
+  mapping for zcim_rap_table
+    {
+      Id             = id;
+      Firstname      = firstname;
+      Lastname       = lastname;
+      Age            = age;
+      Course         = course;
+      Courseduration = courseduration;
+      Status         = status;
+      Gender         = gender;
+      Dob            = dob;
+    }
+ }
